@@ -4,8 +4,9 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="composition-main" class="site-main">
-			<h1>Compositions</h1>
+	 <main id="composition-main" class="site-main">
+		<h1>Compositions</h1>
+		 <div class="comp-div">
       <section class="comp-category-section">
         <div class="comp-category-container">
           <ul class="comp-category-list">
@@ -115,9 +116,9 @@ get_header();
 					endwhile;
 					?>
 				</ul>
-		 	</div>
-		 </section>
-
+		 	 </div>
+		  </section>
+		 </div>
 		</main>
 	</div>
 

@@ -524,6 +524,11 @@ color: white;
 
 #page-body #content {
 	margin-top: 90px;
+	overflow: hidden;
+}
+
+#primary, .site-main {
+		overflow: hidden;
 }
 
 hr {
@@ -766,7 +771,10 @@ color: #EED3B3;
 
 	.site-header {
 		background-color: transparent !important;
+	}
 
+	.speaker i {
+		opacity: 0;
 	}
 }
 
@@ -1009,6 +1017,27 @@ color: #EED3B3;
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+
+.album-main, .product-main, .video-main, .photo-main, #composition-main, .woocommerce-main, .type-biography {
+	background-color: rgba(255,255,255,0.5);
+	margin: 10px 35px 0px 35px;
+	border-radius: 7px;
+	padding: 0 60px;
+}
+
+.album-content-area, .product-content-area {
+	padding-bottom: 40px;
+}
+
+.youtube-div, .photo-gallery-div {
+	padding: 0 20px;
+}
+
+.type-biography {
+	padding-bottom: 10px;
+	margin-bottom: 40px;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -1373,7 +1402,6 @@ body {
 
 .album-content-area, .product-content-area {
 	width: 100%;
-	padding-bottom: 40px;
 	margin: auto 0;
 	display: flex;
   align-items: center;
@@ -1389,9 +1417,6 @@ body {
   background-attachment: fixed;
 }
 
-.album-main , .product-main{
-  margin: 10px 35px 35px 35px;
-}
 
 .album-main p {
   color: black;
@@ -1417,6 +1442,7 @@ body {
 	 grid-template-columns: calc(100% / 4.5) calc(100% / 4.5) calc(100% / 4.5);
    grid-gap: 45px;
 	 justify-content: center;
+	 padding-bottom: 40px;
 }
 
 .fade-in-element {
@@ -1438,7 +1464,7 @@ body {
 @media (max-width: 768px) {
 	.album-container, .product-container {
 		grid-template-columns: 1fr 1fr;
-
+		padding: 20px 20px;
 	}
 
 }
@@ -1448,6 +1474,15 @@ body {
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
+	}
+	.album-link {
+		margin-bottom: 10px;
+	}
+	.cart-link {
+		left: 0 !important;
+		right: 0 !important;
+		margin: auto;
+		margin-top: 15px;
 	}
 
 }
@@ -1570,8 +1605,7 @@ Media Page styling.
 }
 
 .photo-main {
-	margin: 0 35px 0px 35px;
-	padding-bottom: 20px;
+	margin: 0 35px 20px 35px;
 }
 
 .photo-main .photo-gallery-div #ftg-11 .ftg-items .loading-bar {
@@ -1726,6 +1760,7 @@ Compositions styling.
 #composition-main {
 	min-height: 60vh;
 	padding: 0 35px 0 35px;
+	margin-bottom: 40px;
 }
 
 .comp-category-section {
@@ -1734,6 +1769,7 @@ Compositions styling.
 
 .results-section {
 	margin-top: 60px;
+
 }
 
 .comp-category-container {
@@ -2068,6 +2104,20 @@ Single composition
 	margin-bottom: 5%;
 }
 
+@media (max-width: 500px) {
+	.comp--info-section {
+		width: 90%;
+		margin: 0 5%;
+		display: block;
+		float: none;
+	}
+	.comp--media {
+		width: 90%;
+		margin: 5% 5% 0 5%;
+		display: block;
+		float: none;
+	}
+	}
 
 
 /*------------------------------------------------------
@@ -2185,6 +2235,10 @@ input[type=submit]:hover {
 Woocommerce styling.
 --------------------------------------------------------*/
 
+.woocommerce-main {
+	margin-bottom: 40px;
+}
+
 .cart-link {
 	position: absolute;
 	width: auto;
@@ -2202,7 +2256,7 @@ Woocommerce styling.
 }
 
 .woocommerce-page .content-area {
-	margin: 0 15% 0 15%;
+
 }
 
 .woocommerce ul.products li.product .woocommerce-loop-category__title,
@@ -2295,7 +2349,7 @@ Sessionwork/arranging styling.
 }
 
 #sessionwork-arranging-main {
-	background-color: rgba(255, 255, 255, 0.9);
+	background-color: rgba(255, 255, 255, 0.5);
 	width: 75%;
 	margin: 1em 0 2em 0;
 	border-radius: 6px;
